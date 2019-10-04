@@ -1,0 +1,35 @@
+[
+    {
+        "id": "1",
+        "name": "Venn",
+        "designer": "Dalton Maag",
+        "publisher": "Dalton Maag",
+        "license": {
+            "summary":"Free for personal and commercial use",
+            "free": true
+        },
+        "website":"http://daltonmaag.com"
+    },
+    {
+        "id": "2",
+        "name": "Kairos Sans",
+        "designer": "Terrance Weinzierl",
+        "publisher": "Monotype",
+        "license": {
+            "summary":"Free for non-commercial use",
+            "free": true
+        },
+        "website":"https://github.com/Monotype/Monotype_prototype_variable_fonts/tree/master/KairosSans"
+    },
+    {
+        "id": "3",
+        "name": "Input Mono Beta",
+        "designer": "David Jonathan Ross",
+        "publisher": "DJR, Font Bureau",
+        "license": {
+            "summary":"Free for private use in code editors, Paid/commercial",
+            "free": true
+        },
+        "website":"https://djr.com/"
+    }
+]

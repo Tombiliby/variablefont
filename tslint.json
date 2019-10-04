@@ -1,0 +1,35 @@
+{
+    "extends": [
+      "tslint:recommended"
+    ],
+    "rules": {
+      "no-reference": false,
+      "no-unused-expression": false,
+      "no-console": [false, "log", "error"],
+      "arrow-parens": false,
+      "interface-name": false,
+      "eofline": false,
+      "one-variable-per-declaration": false,
+      "ordered-imports": false,
+      "unified-signatures": false,
+      "member-ordering": false,
+      "trailing-comma": false,
+      "object-literal-sort-keys": false,
+      "object-literal-key-quotes": false,
+      "max-line-length": { "options": [180] },
+      "callable-types": true,
+      "jsx-no-multiline-js": false,
+      "jsx-alignment": false,
+      "jsx-no-lambda": false,
+      "typedef": [false, "parameter", "arrow-parameter", "member-variable-declaration"],
+      "completed-docs": [false, "classes", "functions", "methods"]
+    },
+    "linterOptions": {
+      "exclude": [
+        "public",
+        "node_modules",
+        "../node_modules",
+        "dist"
+      ]
+    }
+  }
