@@ -1,8 +1,13 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
-import fontsData from "../components/fonts.json" 
+import fontsData from "../components/fonts.json"
 import { Show } from "../types/tvmaze";
+
+interface Props {
+    id: string;
+    name?: string;
+}
 
 interface Props {
     id: string;
@@ -49,17 +54,38 @@ const FontListZone = () => (
     </>
 );
 
+const FontsLink = ({ font }: any) => (
+    <li>
+        <Link href="/fonts/[id]" as={`/fonts/${font.id}`}>
+            <a>{font.name}</a>
+        </Link>
+        <style jsx>{`
+            li {
+                list-style: none;
+                margin: 5px 0;
+            }   
+
+            a {
+                text-decoration: none;
+                color: blue;
+                font-family: 'Arial';
+            }
+
+            a:hover {
+                opacity: 0.6;
+            }
+        `}</style>
+    </li>
+);
 
 const Index = (props: any) => (
     <Layout>
-        {fontsData.map(font => (
-            <li key={font.id}>
-            <Link href="/p/[id]" as={`/p/${font.id}`}>
-                <a>{font.name}</a>
-            </Link>
-            </li>
-        ))}
-        <hr/>
+        <ul>
+            {fontsData.map(font => (
+                <FontsLink key={font.id} font={font} />
+            ))}
+        </ul>
+        <hr />
         <PostListZone />
         <FontListZone />
         <hr />
@@ -73,6 +99,33 @@ const Index = (props: any) => (
                 </li>
             ))}
         </ul>
+
+
+        <style jsx>{`
+        h2,
+        a {
+          font-family: 'Arial';
+        }
+
+        ul {
+          padding: 0;
+        }
+
+        li {
+          list-style: none;
+          margin: 5px 0;
+        }
+
+        a {
+          text-decoration: none;
+          color: blue;
+        }
+
+        a:hover {
+          opacity: 0.6;
+        }
+      `}</style>
+
     </Layout>
 );
 
