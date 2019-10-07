@@ -10,7 +10,7 @@ const Show = (props: any) => (
     </Layout>
 );
 
-Show.getInitialProps = async function(context: any) {
+Show.getInitialProps = async (context: any) => {
     const { id } = context.query;
     const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
     const show = await res.json();
