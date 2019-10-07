@@ -8,6 +8,6 @@ const Bookmarks = () => (
             <li><a href="https://github.com/Monotype/variableFont.js/tree/master/src">https://github.com/Monotype/variableFont.js/tree/master/src</a></li>
         </ul>
     </Layout>
-)
+);
 
 export default Bookmarks;

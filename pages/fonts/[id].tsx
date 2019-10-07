@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
-import Layout from '../../components/Layout';
+import Layout from "../../components/Layout";
 import fontsData from "../../components/fonts.json";
-import Markdown from 'react-markdown';
+import Markdown from "react-markdown";
 
 const Font = (props: any) => {
     const router = useRouter();
@@ -56,7 +56,6 @@ And here's the content.
 
             </li>
         ))}
-
 
     </Layout>
 );

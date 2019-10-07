@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import Link from "next/link";
 import fetch from "isomorphic-unfetch";
-import fontsData from "../components/fonts.json"
+import fontsData from "../components/fonts.json";
 import { Show } from "../types/tvmaze";
 
 interface Props {
@@ -22,7 +22,6 @@ const PostLink = (props: Props) => (
     </li>
 );
 
-
 const PostListZone = () => (
     <>
         <h2>Blog</h2>
@@ -33,7 +32,6 @@ const PostListZone = () => (
         </ul>
     </>
 );
-
 
 const FontLink = (props: any) => (
     <li>
@@ -63,7 +61,7 @@ const FontsLink = ({ font }: any) => (
             li {
                 list-style: none;
                 margin: 5px 0;
-            }   
+            }
 
             a {
                 text-decoration: none;
@@ -100,7 +98,6 @@ const Index = (props: any) => (
             ))}
         </ul>
 
-
         <style jsx>{`
         h2,
         a {
@@ -129,10 +126,8 @@ const Index = (props: any) => (
     </Layout>
 );
 
-
-
-Index.getInitialProps = async function () {
-    const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
+Index.getInitialProps = async function() {
+    const res = await fetch("https://api.tvmaze.com/search/shows?q=batman");
     const data = await res.json();
 
     console.log(`Show data fetched. Count: ${data.length}`);
@@ -142,6 +137,5 @@ Index.getInitialProps = async function () {
     };
 
 };
-
 
 export default Index;

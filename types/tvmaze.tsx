@@ -83,5 +83,3 @@ export interface RootObject {
     score: number;
     show: Show;
 }
-
-
